@@ -26,8 +26,8 @@ To get a local copy up and running, follow these simple steps.
 
 1.  **Clone the repo**
     ```sh
-    git clone https://github.com/your-org/autonomous-llm-simulator.git
-    cd autonomous-llm-simulator
+    git clone https://github.com/deniskropp/t141.git
+    cd t141
     ```
 2.  **Create and activate a virtual environment**
     ```sh
@@ -80,6 +80,12 @@ The project is organized as follows:
 ├── requirements.txt       # Python dependencies
 └── README.md              # This file
 ```
+
+## Canon
+
+Shared concepts (runtime kernel with `Result`/`Error`, `ArtifactStore` with `AddArtifact`/`GetArtifact`, `Orchestrator.AssignAgent`, Task-Agnostic Steps, role IDs, JSON schemas) are defined in [deniskropp/t333](https://github.com/deniskropp/t333) on `main`, the neutral source of truth. Only `canon/` there is normative (see [`canon/SPEC.md`](https://github.com/deniskropp/t333/blob/main/canon/SPEC.md)). This repo references t333 `main` without version pinning ([ADR-0005](https://github.com/deniskropp/t333/blob/main/docs/adr/0005-referenz-auf-main.md)). Repo-specific extensions use the `⫻x-t141/` namespace.
+
+Agent names in the generated plans (e.g. GPTASe, puTASe) are persona bindings for the abstract role IDs in [`canon/roles.yaml`](https://github.com/deniskropp/t333/blob/main/canon/roles.yaml).
 
 ## Contributing
 
